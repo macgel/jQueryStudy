@@ -1,1 +1,1 @@
-// Trello �Ƃ̘A�g�T���v��
+// Trello との連携サンプル
