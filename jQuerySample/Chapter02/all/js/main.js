@@ -2,23 +2,27 @@
 $(function(){
     $('#typo')
     .on('mouseover', function(){
-        $(this).css({
+        $(this).stop(true).animate({
             color:'#ebc000',
             backgroundColor:'#ae5e9b'
-        });
+        },
+        500);
     })
     .on('mouseout', function(){
-        $(this).css({
-            color:'',
-            backgroundColor:''
-        });
+        $(this).stop(true).animate({
+            color:'#ffffff',
+            backgroundColor:'#3498db'
+        },
+        500);
     });
     
-    $('#typo .inner').on('click', function(){
+    $('#typo .inner')
+    .css({top:'-100px'})
+    .on('click', function(){
         $(this).animate({
-            opacity:0,
-            fontSize:'0px'
+            top:'100px'
         },
-        1500);
+        1500,
+        'swing');
     });
 });
